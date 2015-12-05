@@ -1,0 +1,128 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="firat.Site1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+            height: 112px;
+            font-weight: bold;
+            text-align: center;
+            font-size: xx-large;
+            color: #FFFFFF;
+            font-family: "Century Schoolbook";
+        }
+        .style3
+        {
+            height: 108px;
+            width: 93%;
+        }
+        .style5
+        {
+            height: 27px;
+        }
+        .style6
+        {
+            height: 108px;
+            width: 185px;
+        }
+        .style7
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="height: 683px">
+        <table class="style1">
+            <tr>
+                <td bgcolor="#0066FF" class="style2" colspan="2">
+                    HASTA TAKİP SİSTEMİ</td>
+            </tr>
+            <tr>
+                <td bgcolor="#6699FF" colspan="2" class="style7">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td bgcolor="#0099FF" class="style6" valign="top" width="1px">
+                    <asp:Menu ID="Menu1" runat="server" Font-Bold="True" 
+                        Font-Names="Times New Roman" Font-Underline="False" ForeColor="Black" 
+                        Height="230px" IncludeStyleBlock="False" StaticSubMenuIndent="16px" 
+                        Width="128px">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/hasta_kayit.aspx" Text="Hasta Kaydı" 
+                                Value="Hasta Kaydı"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Muayene.aspx" Text="Muayene" Value="Muayene">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Reçete" Value="New Item" NavigateUrl="~/Reçete.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Randevu" Value="Randevu" NavigateUrl="~/Randevu.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Raporlar" Value="Raporlar" NavigateUrl="~/Rapor.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Tüm kayıtlar" Value="New Item" 
+                                NavigateUrl="~/Tumkayitlar.aspx"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </td>
+                <td class="style3">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            <p style="height: 1px">
+                <br />
+            </p>
+            <p>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                    ConnectionString="<%$ ConnectionStrings:projeConnectionString %>" 
+                    SelectCommand="SELECT [TC], [Ad], [Soyad], [DYeri], [DTarihi], [Cinsiyet], [SGuvence], [AnneAdi], [BabaAdi], [Meslek], [MHali], [KanGrubu], [Tel], [Adres] FROM [HKayitTablo]">
+                </asp:SqlDataSource>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p style="height: 0px">
+            </p>
+            <p>
+            </p>
+        
+        </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#3366FF" class="style5" colspan="2">
+                </td>
+            </tr>
+        </table>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+    </div>
+    </form>
+</body>
+</html>
